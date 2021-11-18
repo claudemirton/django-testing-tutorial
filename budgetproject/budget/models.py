@@ -27,7 +27,7 @@ class Project(models.Model):
     def total_transactions(self):
         expense_list = Expense.objects.filter(project=self)
         return len(expense_list)
-
+    
     def get_absolute_url(self):
         return '/' + self.slug
 
